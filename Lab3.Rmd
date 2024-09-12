@@ -1,0 +1,24 @@
+---
+title: "Penguins"
+author: "hopper"
+date: "2024-09-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data
+
+Today we are using data collected and made available by [Dr Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station](https://pallter.marine.rutgers.edu/). The dataset contains information on 344 individuals of 3 species of penguin.
+
+![The three species of penguin that were used in the creation of this dataset.](https://www.gabemednick.com/post/penguin/featured.png)
+
+<br>
+
+## Single trait distribution
+
+## Relationship between multiple traits
+
+## Sexual dimorphism
