@@ -50,4 +50,36 @@ ggplot(data = penguins, mapping = aes(x = body_mass_g, y = flipper_length_mm, co
 
 ## Sexual dimorphism
 
+Let's take a look at sexually dimorphic traits across the three species.
 
+First, bill depth:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(data = subset(penguins, !is.na(sex)), mapping = aes(x = bill_depth_mm)) +
+  geom_density(aes(fill = species), alpha = 0.5) +
+  facet_wrap(~ sex, nrow = 3)
+
+```
+
+Additionally, we can look at flipper length:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(data = subset(penguins, !is.na(sex)), mapping = aes(x = flipper_length_mm)) +
+  geom_density(aes(fill = species), alpha = 0.5) +
+  facet_wrap(~ sex, nrow = 3)
+
+```
+
+On a visual inspection of the two plots, bill depth appears to be a sexually dimorphic trait in all three species, with males having deeper bills than females. Flipper length, by comparison, is more strongly sexually dimorphic in Gentoo penguins than in Adelie and Chinstrap penguins. 
+
+Finally, let us look at whether body mass is sexually dimorphic:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(data = subset(penguins, !is.na(sex)), mapping = aes(x = sex, y = body_mass_g, colour = sex)) +
+  geom_boxplot() +
+  facet_wrap(~ species)
+
+```
