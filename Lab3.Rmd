@@ -2,7 +2,7 @@
 title: "Penguins"
 author: "hopper"
 date: "2024-09-12"
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
