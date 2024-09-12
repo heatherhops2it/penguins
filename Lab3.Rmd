@@ -15,10 +15,31 @@ Today we are using data collected and made available by [Dr Kristen Gorman](http
 
 ![The three species of penguin that were used in the creation of this dataset.](https://www.gabemednick.com/post/penguin/featured.png)
 
+```{r, include=FALSE}
+library(palmerpenguins) #install.packages("palmerpenguins")
+library(tidyverse)
+library(ggplot2)
+```
+
 <br>
 
 ## Single trait distribution
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = penguins) + geom_histogram(mapping = aes(x = bill_length_mm, fill = species), alpha = 0.75) + facet_wrap(~ species, nrow = 3)
+```
+
+<br>
+
 ## Relationship between multiple traits
 
+```{r}
+
+```
+
+
+<br>
+
 ## Sexual dimorphism
+
+
