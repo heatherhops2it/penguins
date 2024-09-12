@@ -1,0 +1,13 @@
+name: "Penguins"
+navbar:
+  title: "Learning About Penguins"
+  left:
+    - text: "Landing"
+      href: index.html
+    - text: "Single Trait"
+      href: single.html
+    - text: "Multiple Traits"
+      href: multiple.html
+    - text: "Sexual Dimorphism"
+      href: sexual.html
+output_dir: "."

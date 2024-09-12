@@ -1,0 +1,26 @@
+---
+title: "Penguins"
+author: "hopper"
+date: "2024-09-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(palmerpenguins) #install.packages("palmerpenguins")
+library(tidyverse)
+library(ggplot2)
+```
+
+
+## Single trait distribution
+
+First, we will plot out the distribution of the bill length of each species. Note that some bill lengths overlap. 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(data = penguins) + geom_histogram(mapping = aes(x = bill_length_mm, fill = species), alpha = 0.75) + facet_wrap(~ species, nrow = 3)
+
+```
+
+<br>

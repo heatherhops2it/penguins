@@ -1,0 +1,27 @@
+---
+title: "Penguins"
+author: "hopper"
+date: "2024-09-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(palmerpenguins) #install.packages("palmerpenguins")
+library(tidyverse)
+library(ggplot2)
+```
+
+
+## Relationship between multiple traits
+
+An exploration of the relationship between body size (mass, in g) and flipper size (length, mm). Different species are indicated.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(data = penguins, mapping = aes(x = body_mass_g, y = flipper_length_mm, colour = species, shape = species)) + geom_point() + geom_smooth(method = lm)
+
+```
+
+
+<br>
